@@ -609,6 +609,14 @@ body {
 .modal-close-icon {
 }
 
+.modal-header {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-headings-navy);
+  text-align: center;
+}
+
 /*------------------PORTFOLIO MAIN---------------------- */
 
 .portfolio {

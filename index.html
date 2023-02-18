@@ -536,7 +536,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button
           type="button"
@@ -549,6 +549,33 @@
             ></use>
           </svg>
         </button>
+        <h2 class="modal-header">
+          Leave your contacts and we will call you back
+        </h2>
+        <form action="">
+          <label>
+            Name
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" />
+          </label>
+          <label>
+            Email
+            <input type="text" name="email" />
+          </label>
+          <label>
+            Comment
+            <textarea
+              name="comment"
+              cols="30"
+              rows="5"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+          <button type="Submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
