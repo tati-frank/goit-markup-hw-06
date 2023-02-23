@@ -57,7 +57,7 @@
       <section class="hero">
         <div class="container hero-wrap">
           <h1 class="hero-header">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-button pointer" data-modal-open>
+          <button type="button" class="button pointer" data-modal-open>
             Order Service
           </button>
         </div>
@@ -534,9 +534,18 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe-footer">
+          <label>
+            <span class="subscibe-text">Subscribe</span>
+            <input class="subscribe-input" type="text" placeholder="E-mail" />
+          </label>
+          <button class="subscribe-button pointer" type="submit">
+            Subscribe
+          </button>
+        </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button
           type="button"
@@ -554,27 +563,28 @@
         </h2>
         <form action="">
           <label>
-            Name
-            <input type="text" name="name" />
+            <span class="input-label">Name</span>
+            <input class="modal-input" type="text" name="name" />
           </label>
           <label>
-            Phone
-            <input type="tel" name="phone" />
+            <span class="input-label">Phone</span>
+            <input class="modal-input" type="tel" name="phone" />
           </label>
           <label>
-            Email
-            <input type="text" name="email" />
+            <span class="input-label">Email</span>
+            <input class="modal-input" type="text" name="email" />
           </label>
           <label>
-            Comment
+            <span class="input-label">Comment</span>
             <textarea
+              class="modal-text-area"
               name="comment"
-              cols="30"
-              rows="5"
               placeholder="Text input"
             ></textarea>
           </label>
-          <button type="Submit">Send</button>
+          <button class="submit-modal button pointer" type="Submit">
+            Send
+          </button>
         </form>
       </div>
     </div>
