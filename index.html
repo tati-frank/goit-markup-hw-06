@@ -536,10 +536,18 @@
         </div>
         <div class="subscribe-footer">
           <p class="subscribe-text">Subscribe</p>
-          <input class="subscribe-input" type="text" placeholder="E-mail" />
+          <form class="subscribe-form">
+            <input class="subscribe-input" type="text" placeholder="E-mail" />
           <button class="subscribe-button pointer" type="submit">
-            Subscribe
+            <span class="subscribe-button-text">Subscribe
+            <svg class="subscribe-icon" width="24" height="24">
+              <use
+                href="./images-icons/symbol-defs-opitmised.svg#icon-subscribe-icon"
+              ></use>
+            </svg>
+            </span> 
           </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -560,29 +568,69 @@
           Leave your contacts and we will call you back
         </h2>
         <form action="">
-          <label>
-            <span class="input-label">Name</span>
-            <input class="modal-input" type="text" name="name" />
-          </label>
-          <label>
-            <span class="input-label">Phone</span>
-            <input class="modal-input" type="tel" name="phone" />
-          </label>
-          <label>
-            <span class="input-label">Email</span>
-            <input class="modal-input" type="text" name="email" />
-          </label>
-          <label>
-            <span class="input-label">Comment</span>
+          <label class="input-label" for="name">Name</label>
+          <div class="input-wrap">
+            <input
+              class="modal-input"
+              type="text"
+              name="name"
+              id="name"
+              required
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use
+                href="./images-icons/symbol-defs-opitmised.svg#icon-person"
+              ></use>
+            </svg>
+          </div>
+          <label class="input-label" for="phone"
+            >Phone<label></label>
+            <div class="input-wrap">
+              <input
+                class="modal-input"
+                type="tel"
+                name="phone"
+                id="phone"
+                required
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use
+                  href="./images-icons/symbol-defs-opitmised.svg#icon-phone"
+                ></use>
+              </svg>
+            </div>
+            <label for="email" class="input-label">Email</label>
+            <div class="input-wrap">
+              <input class="modal-input" type="text" name="email" id="email" required />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images-icons/symbol-defs-opitmised.svg#icon-email"></use>
+              </svg>
+            </div>
+          <label class="input-label" for="comment">Comment</label>
             <textarea
               class="modal-text-area"
-              name="comment"
+              name="comment" 
+              id="comment"
               placeholder="Text input"
             ></textarea>
-          </label>
-          <button class="submit-modal button pointer" type="Submit">
-            Send
-          </button>
+          <div class="policy-wrap">
+            <input
+              class="input-check-box visually-hidden"
+              type="checkbox"
+              id="policy"
+              name="policy"
+              value="true"
+            />
+            <label class="policy-text" for="policy"
+              >I accept the terms and conditions of the
+              <b class="policy-text-focus pointer"> Privacy Policy</b></label
+            >
+          </div>
+          <div class="button-wrap">
+            <button class="submit-modal button pointer" type="Submit">
+              Send
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -131,7 +131,7 @@ body {
   color: var(--primary-brand-iris);
 
   display: block;
-  padding-top: 24px;
+  padding: 24px 0;
 
   margin-right: 76px;
 }
@@ -201,7 +201,7 @@ body {
   color: var(--body-text-slate);
 
   display: block;
-  padding-top: 24px;
+  padding: 24px 0;
 
   transition-property: color;
   transition-duration: var(--transition-duration);
@@ -219,7 +219,7 @@ body {
   color: var(--body-text-slate);
 
   display: block;
-  padding-top: 24px;
+  padding: 24px 0;
 
   transition-property: color;
   transition-duration: var(--transition-duration);
@@ -245,12 +245,14 @@ body {
   background-position: center;
   background-size: cover;
   max-width: 1440px;
-  flex-grow: 1;
   text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-wrap {
 }
 .hero-header {
   font-weight: 700;
@@ -395,11 +397,14 @@ body {
   justify-content: center;
   gap: 24px;
 }
-
-.team-social-media-link {
-  background-color: var(--primary-brand-iris);
+.team-social-media-item {
   width: 40px;
   height: 40px;
+}
+.team-social-media-link {
+  background-color: var(--primary-brand-iris);
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -536,6 +541,7 @@ body {
 .social-media-footer-link:hover,
 .social-media-footer-link:focus {
   background-color: var(--footer-icons-hover-green);
+  outline: transparent;
 }
 
 .social-media-footer-icon {
@@ -553,8 +559,11 @@ body {
 
   margin-top: 0;
   margin-bottom: 16px;
+}
 
-  outline: 1px solid tomato;
+.subscribe-form {
+  display: flex;
+  gap: 24px;
 }
 .subscribe-input {
   width: 264px;
@@ -564,6 +573,14 @@ body {
   background-color: transparent;
   padding: 8px 16px;
   margin: 0;
+  outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+}
+.subscribe-input:focus {
+  border-color: var(--primary-brand-iris);
 }
 
 .subscribe-button {
@@ -575,7 +592,6 @@ body {
   border: none;
   border-radius: 4px;
   padding: 0;
-  margin: 0;
 
   transition-property: background-color;
   transition-duration: var(--transition-duration);
@@ -585,6 +601,17 @@ body {
 .subscribe-button:focus {
   background-color: var(--btn-active-ocean);
   border: none;
+}
+
+.subscribe-button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-icon {
+  fill: var(--white);
+  margin-left: 16px;
 }
 
 /* --------------------MODAL------------------------ */
@@ -663,15 +690,42 @@ body {
   font-size: 12px;
   line-height: 1.33;
   color: var(--logo-light-slate);
-  margin-bottom: 4px;
 }
 .modal-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  margin: 0;
+  padding-left: 38px;
+  outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.modal-input:focus {
+  border-color: var(--primary-brand-iris);
+}
+.modal-input:focus + .modal-icon {
+  fill: var(--primary-brand-iris);
+}
+.input-wrap {
+  position: relative;
+  margin-top: 4px;
   margin-bottom: 8px;
-  padding-left: 16px;
+}
+.modal-icon {
+  fill: var(--dark-headings-navy);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .modal-text-area {
@@ -681,6 +735,17 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   resize: none;
+  outline: transparent;
+
+  margin-bottom: 16px;
+
+  transition-property: border-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.modal-text-area:focus {
+  border-color: var(--primary-brand-iris);
 }
 
 .modal-text-area::placeholder {
@@ -688,8 +753,52 @@ body {
   line-height: 1.33;
   color: rgba(117, 117, 117, 0.5);
 }
+.button-wrap {
+  display: flex;
+}
+.policy-wrap {
+  margin-bottom: 24px;
+}
+.policy-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+  display: flex;
+}
+.policy-text::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--dark-headings-navy);
+  border-radius: 2px;
+  margin-right: 8px;
 
+  transition-property: background-color, border-color, background-image;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.input-check-box:checked + .policy-text::before {
+  background-color: var(--btn-active-ocean);
+  border: none;
+  background-image: url(../images-background/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-check-box:focus + .policy-text::before {
+  border-color: var(--btn-active-ocean);
+}
+
+.policy-text-focus {
+  text-decoration-line: underline;
+  color: var(--primary-brand-iris);
+  padding-left: 5px;
+}
 .submit-modal {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*------------------PORTFOLIO MAIN---------------------- */
