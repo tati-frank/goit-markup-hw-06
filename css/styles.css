@@ -172,7 +172,7 @@ body {
   color: var(--btn-active-ocean);
 }
 
-.navigation-link.current::after {
+.current::after {
   content: '';
   position: absolute;
   left: 0;
