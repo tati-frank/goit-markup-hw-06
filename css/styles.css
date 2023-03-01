@@ -575,6 +575,7 @@ body {
   padding: 8px 16px;
   margin: 0;
   outline: transparent;
+  color: var(--white);
 
   transition-property: border-color;
   transition-duration: var(--transition-duration);
@@ -582,6 +583,10 @@ body {
 }
 .subscribe-input:focus {
   border-color: var(--primary-brand-iris);
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-button {
@@ -700,6 +705,7 @@ body {
   margin: 0;
   padding-left: 38px;
   outline: transparent;
+  background-color: #fcfcfc;
 
   transition-property: border-color;
   transition-duration: var(--transition-duration);
@@ -737,7 +743,9 @@ body {
   padding: 8px 16px;
   resize: none;
   outline: transparent;
+  background-color: #fcfcfc;
 
+  margin-top: 4px;
   margin-bottom: 16px;
 
   transition-property: border-color;
